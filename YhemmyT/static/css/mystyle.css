@@ -1,0 +1,82 @@
+
+
+/* NavBar */
+.navbar {
+    background: none;
+}
+.navbar-dropdown {
+    background: none;
+}
+
+/* Top Content */
+#image_background {
+    background-image: url(https://s3-us-west-2.amazonaws.com/yhemmytravels/city.jpg) ;
+    background-repeat: no-repeat;
+    min-height: 600px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+}
+
+/* COlors for the nav item */
+.navbar-item {
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+#service-dropdown {
+    text-transform: uppercase;
+}
+.column {
+    text-align: center;
+}
+
+/* what we do */
+#what-do {
+    text-align: center;
+}
+
+/* whyus */
+#why-us {
+ text-align: center;
+}
+
+
+/* Contact Us Home Page */
+#contact-us {
+    background-image: url(https://s3-us-west-2.amazonaws.com/yhemmytravels/Boulevard-Station.png);
+    background-repeat: no-repeat;
+    height: 500px;
+    font-weight: bold;
+    color: antiquewhite;
+}
+/* Icons */
+.pipe {
+    font-size: 20px;
+}
+.fa-phone {
+    font-size: 30px;
+}
+.fa-whatsapp {
+    font-size: 30px;
+}
+.fa-envelope {
+    font-size: 30px;
+}
+
+
+/* Footer */
+.social {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer {
+    height: 10px;
+    background-color: #363636;
+    color: beige;
+}
+
+.footer-area {
+    height: 10px;
+}

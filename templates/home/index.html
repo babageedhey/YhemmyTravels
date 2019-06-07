@@ -1,0 +1,208 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<div id="image_background">
+        <!-- Header -->
+        <div id="header-nav" class="container is-transparent">
+            <!-- Icon Headers -->
+            <nav class="navbar is-transparent">
+                <div class="navbar-start">
+                    <ul class="navbar-item">
+                        <li class="navbar-item"><i class="fas fa-mobile-alt "></i><span> +1 832-614-1954</span></li>
+
+                        <li class="navbar-item"><i class="fas fa-envelope "></i><span> info@yhemmy.com</span></li> 
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                        <ul class="navbar-item">
+                            <li class="navbar-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="navbar-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="navbar-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        </ul>
+                </div>
+            </nav>
+            
+            <!-- Main Header -->
+            <nav class="navbar" role="navigation" aria-label="main navigation">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="#">
+                    <img src="https://s3-us-west-2.amazonaws.com/yhemmytravels/logopng.png" width="150" height="150">
+                    </a>
+                
+                    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    </a>
+                </div>
+                
+                <div  class="navbar-menu">
+                    <div class="navbar-start">
+                    
+                    </div>
+                
+                    <div class="navbar-end">
+                        <div class="navbar-item">
+                            <a class="navbar-item">
+                                HOME
+                            </a>
+                            <a class="navbar-item" href="#why-us">
+                                WHY US??
+                            </a>
+                            <div class="navbar-item is-hoverable">
+                                <a class="navbar-link is-arrowless navbar-item">SERVICES</a>
+                                <div class="navbar-dropdown">
+                                    {% for service in services%}
+                                        <a class="navbar-item" href="#{{service.}}"><span id="service-dropdown">{{service.title}}</span></a>
+                                    {% endfor %}
+                                    
+                                </div>
+                            </div>
+                            <a class="navbar-item">
+                                    CONTACT US
+                            </a>
+                            <a class="navbar-item">
+                                    PAYMENT
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div> 
+    </div>
+    <br>
+    <!-- What we do -->
+    <div id="what-do">
+            <div class="container">
+                <h5 class="subtitle is-5 center"> WHAT WE DO</h5>
+                <hr>
+                <div class="columns">
+                    <div class="column">
+                        <div class="card" id="flight">
+                            <div class="card-image">
+                                <figure class="image is-2by2">
+                                    <img src="https://s3-us-west-2.amazonaws.com/yhemmytravels/customerservices01.jpg" alt="image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                        <h5>Flight Bookings: We will help you with your flight booking at the cheapest price possible</h5>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card" id="airport">
+                                <div class="card-image">
+                                    <figure class="image is-2by2">
+                                        <img src="https://s3-us-west-2.amazonaws.com/yhemmytravels/drop-off.jpg" alt="image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="content">
+                                            <h5>Airport Pickup/Drop off: We offer airport pick ups and drop offs in the Portland Oregon, Dallas and Houston Texas area.</h5>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        
+                    </div>
+    
+                    <div class="column">
+                        <div class="card" id="student">
+                            <div class="card-image">
+                                <figure class="image is-2by2">
+                                    <img src="https://s3-us-west-2.amazonaws.com/yhemmytravels/Students.png" alt="image">
+                                </figure>
+                            </div>
+                            <div class="card-content">
+                                <div class="content">
+                                        <h5>Student services: We provide a variety of student services such as admission applications, Sevis fee payment, consultancy, mentorship.</h5>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <br>
+                        <div class="card" id="accomodation">
+                                <div class="card-image">
+                                    <figure class="image is-2by2">
+                                        <img src="https://s3-us-west-2.amazonaws.com/yhemmytravels/hotel.jpg" alt="image">
+                                    </figure>
+                                </div>
+                                <div class="card-content">
+                                    <div class="content">
+                                            <h5>Hotel/Accommodation: We assist our clients with hotel/ accommodation reservation</h5>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- WHY US -->
+        <div id="why-us">
+            <div class="container">
+                <h5 class="subtitle is-5 center">WHY US</h5>
+                <hr>
+                <p>
+                    At Yhemmy travels, we are committed to achieving excellence at all times. We are customer-satisfaction driven and are highly committed to delivering quality service to our esteemed customers.
+    
+                    We are committed to providing you with high quality travel services making your travel experience a memorable and enjoyable one including providing you with cheap flight tickets and airport pickups/drop offs (Portland Oregon, Dallas and Houston Texas area).
+    
+                    Due to our strong passion for education, we have created an excellent student service package that will assist students to excel abroad such as admission support and mentorship.
+                </p>
+                <br>
+                {% if services%}
+                <p><strong>Services:</strong></p>
+                    {% for service in services %}
+                    <ul>
+                        <li>{{service.title}}</li>
+                    </ul>
+                    {% endfor %}
+                {% else %}
+                    <br>
+                {% endif%}
+            </div>
+        </div>
+        <br>
+        <div id="contact-us">
+            <!-- Services Section-->
+            <div id="Banner">
+                <section class="hero is-primary">
+                    <div class="hero-body">
+                        <div class="container">
+                        <h1 class="title">
+                            WHAT YOU GET FROM US IS A DEDICATED SERVICE TO SUITE YOUR TRAVEL NEED
+                        </h1>
+                        <h2 class="subtitle">
+                            LET US TAKE THE BURDEN AWAY FROM YOU BY PROVIDING YOU THE BEST SERVICE
+                        </h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <br>
+            <!-- COntact Us Section -->
+            <div id="contact">
+                <div class="container">
+                    <div class="columns">
+                        <div class="column">
+                            <h3><span> CALLor WHATSAPP US</span></h3><br>
+                            <span><i class="fas fa-phone"></i><span class="pipe"> | </span><i class="fab fa-whatsapp"></i></span><br>
+                            <span>+1 832-614-1954</span><br>
+                            <span>+1 469-605-1142</span>
+                        </div>
+                        <div class="column">
+                            <h3><span> E-MAIL US</span> </h3><br>
+                            <span><i class="far fa-envelope"></i></span><br>
+                            <span>info@yhemmy.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+{% endblock %}
