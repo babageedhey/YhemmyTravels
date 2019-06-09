@@ -1,0 +1,10 @@
+#header {
+    height: 50px;
+    background-color: black;
+    color: aliceblue
+}
+
+#branding h1 {
+    color: aliceblue;
+    background-color: black;
+}
